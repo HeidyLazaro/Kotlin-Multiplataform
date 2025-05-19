@@ -80,6 +80,8 @@ kotlin {
             implementation("io.ktor:ktor-client-cio:3.1.3")
             //implementation("io.coil-kt:coil-compose:2.4.0") // funciona para desktop también
             implementation("org.jetbrains.kotlinx:kotlinx-coroutines-swing:1.7.3")
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+            //implementation("org.jetbrains.skiko:skiko-awt-runtime-desktop:0.7.91")
         }
 
         wasmJsMain.dependencies{
@@ -90,7 +92,8 @@ kotlin {
             implementation("io.ktor:ktor-client-js:3.1.3-eap-1280")
             implementation("io.ktor:ktor-client-content-negotiation:3.1.3")
             implementation("io.ktor:ktor-serialization-kotlinx-json:3.1.3")
-
+            //implementation(compose.web.core)      // Core Compose Web UI
+            implementation(compose.runtime)
         }
     }
 }
@@ -123,6 +126,8 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.ui.graphics.android)
+    implementation(libs.androidx.ui.android)
     debugImplementation(compose.uiTooling)
 }
 
