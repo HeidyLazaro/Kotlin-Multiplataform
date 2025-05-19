@@ -87,7 +87,7 @@ kotlin {
             //implementation("io.ktor:ktor-client-content-negotiation:2.3.5")
             //implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.5")
             implementation("io.ktor:ktor-client-core:3.1.3")
-            implementation("io.ktor:ktor-client-wasm:3.1.3")
+            implementation("io.ktor:ktor-client-js:3.1.3-eap-1280")
             implementation("io.ktor:ktor-client-content-negotiation:3.1.3")
             implementation("io.ktor:ktor-serialization-kotlinx-json:3.1.3")
 
