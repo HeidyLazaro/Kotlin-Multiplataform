@@ -7,9 +7,10 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
-    alias(libs.plugins.composeHotReload)
+    //alias(libs.plugins.composeHotReload)
 
     kotlin("plugin.serialization") version "1.9.10"
+
 }
 
 kotlin {
@@ -20,9 +21,9 @@ kotlin {
             }
         }
     }
-    
+
     jvm("desktop")
-    
+
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
         moduleName = "composeApp"
@@ -42,11 +43,11 @@ kotlin {
         }
         binaries.executable()
     }
-    
+
     sourceSets {
         val desktopMain by getting
         val wasmJsMain by getting
-        
+
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
@@ -92,8 +93,18 @@ kotlin {
             implementation("io.ktor:ktor-client-js:3.1.3-eap-1280")
             implementation("io.ktor:ktor-client-content-negotiation:3.1.3")
             implementation("io.ktor:ktor-serialization-kotlinx-json:3.1.3")
+            implementation("media.kamel:kamel-image-default:1.0.5")
+            //implementation("org.jetbrains.compose.web:web-core:1.8.0-web-core-1.8.0.pom")
+
+            //implementation("org.jetbrains.compose.html:html-core:1.8.0.")
+            //implementation(compose.web.core)
+
+            implementation("media.kamel:kamel-image-default:1.0.0-beta.1")
+
             //implementation(compose.web.core)      // Core Compose Web UI
             implementation(compose.runtime)
+            //implementation(compose.html.core)
+
         }
     }
 }

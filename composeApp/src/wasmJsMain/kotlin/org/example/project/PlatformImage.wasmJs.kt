@@ -11,3 +11,4 @@ actual fun getPlatform(): Platform = WasmPlatform()
 @Composable
 actual fun PlatformSpecificImage(imageUrl: String) {
 }
+

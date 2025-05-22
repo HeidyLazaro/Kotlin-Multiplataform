@@ -3,7 +3,8 @@ package org.example.project
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.material3.Text
+import io.kamel.image.KamelImage
+import io.kamel.image.asyncPainterResource
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 
@@ -11,5 +12,10 @@ actual val ioDispatcher: CoroutineDispatcher = Dispatchers.Default
 
 @Composable
 actual fun PokemonImage(url: String, modifier: Modifier) {
-    Text("Imagen no disponible en esta plataforma", modifier = modifier)
+    val painterResource = asyncPainterResource(url)
+    KamelImage(
+        resource = painterResource,
+        contentDescription = "Imagen de Pokémon",
+        modifier = modifier
+    )
 }

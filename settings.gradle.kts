@@ -27,7 +27,7 @@ dependencyResolutionManagement {
         }
         mavenCentral()
         maven("https://maven.pkg.jetbrains.space/public/p/ktor/eap")
-        maven("https://maven.pkg.jetbrains.space/public/p/skiko/maven")
+        //maven("https://maven.pkg.jetbrains.space/public/p/skiko/maven")
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }
